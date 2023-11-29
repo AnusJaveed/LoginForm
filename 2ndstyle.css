@@ -1,0 +1,367 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+body{
+    max-width: 120rem;
+    background: #ececec;
+}
+
+.navbar{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.navbar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+}
+.navbar li{
+    list-style: none;
+    padding: 2rem 2rem;
+
+}
+.navbar a{
+    text-decoration: none;
+    color: rgb(4, 84, 84);
+    font-size: 1rem;
+    font-weight: 600;
+}
+.navbar-logo{
+    flex: 1;
+    color: rgba(7, 142, 144, 0.699);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.navbar-links a::after{
+    content: '';
+    display: block;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    border-bottom :4px solid #743ae1;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+
+}
+.navbar-links a:hover::after{
+    width: 100%;
+}
+
+.container{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.store{
+    display: flex;
+    border-radius: 2rem;
+    width: 60%;
+    background: #fff;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+    height: 70vh;
+}
+
+.right-image{
+    position: relative;
+    display: flex;
+    width: 50%;
+    height: auto;
+    overflow: hidden; 
+}
+
+
+.right-image h3{
+    position: absolute;
+    color:#fff;
+    font-size: 1.5rem;
+    opacity: 0.6;
+    letter-spacing: .1rem;
+    overflow: hidden;
+    top: 50%;
+    left: 10%;
+    width:70%;
+    z-index: 1
+
+}
+
+.right-image> img{
+width: 100%;
+object-fit: cover;
+}
+
+
+.right-image img{
+    border-radius: 2rem;
+}
+
+.left-form{
+    padding: 0.10rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 50%;
+    height: auto;
+    text-align: center;
+}
+.input-box{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    gap: 1.5rem;
+}
+
+.input[type=text], .input[type=password]{   
+      width: 100%;
+      height: 2.5rem;
+      margin-bottom: 10px;
+      border: none;
+      outline: none;
+      font-size: 1.5rem;
+      border-bottom: 1px solid rgba(0,0,0,0.3);
+      
+}
+.input-box label{
+   position: absolute;
+   top: 10px;
+   pointer-events: none;
+   transition: 0.4s;
+   font-size: 1rem;
+}
+.input-box .input:hover~label{
+    top: -10px;
+    left: 0;
+    font-size: 13px
+
+}
+
+.input-box .input:focus~label{
+    top: -10px;
+    font-size: 13px;
+
+}
+
+.input-box .input:valid~label{
+    top: -10px;
+    font-size: 13px;
+
+}
+
+.input-box .input:hover, .input-box .input:focus, .input-box .input:valid{
+    border-bottom: 1px solid #743ae1;
+}
+
+
+
+.left-form h1{
+    text-transform: capitalize;
+    margin-bottom:2rem ;
+}
+
+
+.input-box> .submit{
+    border: none;
+    outline: none;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    background: #ececec;
+    transition: .4s;
+}
+
+.submit:hover{
+    background: rgba(39, 95, 156, 0.5);
+    color: #fff;
+}
+
+.login{
+    text-align: center;
+    width: 100%;
+}
+span{
+    text-transform: capitalize;
+}
+span a{
+    text-decoration: none;
+    color: #743ae1;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: .4s;
+    margin-left: 10px;
+}
+
+span a:hover{
+    color: #743ae1;
+    text-decoration: underline;
+}
+
+
+
+
+            /***** Media-Query-Section *****/   
+
+
+
+
+@media (max-width: 860px){
+
+    .left-form h1{
+        font-size: 1.4rem;
+    }
+}
+
+          /***** Section *****/
+
+
+@media (max-width: 768px) {
+
+
+    .navbar-links{
+        display: none;
+    }
+
+    .navbar-links a::after{
+        content: '';
+        display: block;
+        width: 0;
+        left: 0;
+        bottom: 0;
+        border-bottom :0;
+        border-radius: 0;
+        transition: all 0.3s ease;
+    
+    }
+    .navbar-links a:hover::after{
+        width: 0;
+    }
+
+
+   body{
+    background-image: url(images/anus3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+   }
+
+
+.navbar-logo{
+    color: rgba(245, 245, 245, 0.799);
+}
+
+
+.right-image{
+    display: none;
+}
+
+    .store{
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 85vh;
+    }
+
+    .left-form {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        padding: 1rem 1rem;
+        background: transparent;
+    }
+
+    .input-box{
+      width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+         margin: .1rem 0;
+         gap: 1.5rem;
+        background: transparent;
+    }
+
+    .input[type=text], .input[type=password]{   
+     color: #fff;
+           font-size: 1.2rem;
+           background: transparent;
+           border-bottom: 1px solid #fff
+    }
+
+    .left-form h1{
+        color: white;
+        font-size: 2rem;
+    }
+
+    .input-box label{
+        color: #fff;
+    }
+
+
+    .input-box> .submit{
+        color: #fff;
+        border: none;
+        outline: none;
+        height: 2.5rem;
+        font-size: 1.2rem;
+        background: transparent;
+        transition: .4s;
+    }
+    
+    .submit:hover{
+        background: rgba(39, 95, 156, 0.5);
+        color: #fff;
+    }
+
+
+    login{
+        text-align: center;
+        width: 100%;
+    }
+
+    span{
+        text-transform: capitalize;
+        color: whitesmoke;
+    }
+
+    span a{
+        text-decoration: none;
+        color: #743ae1;
+        font-weight: 600;
+        font-size: 1.2rem;
+        transition: .4s;
+        margin-left: 15px;
+    }
+    
+    span a:hover{
+        text-decoration: underline;
+    }
+
+}
+
+
+    
+
+
